@@ -1,0 +1,52 @@
+﻿<ContentControl xmlns:syncfusion="http://schemas.syncfusion.com/wpf"  x:Class="MDIPAINT_new.Tools"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:MDIPAINT_new"
+             mc:Ignorable="d" 
+             d:DesignHeight="450" d:DesignWidth="200" MaxWidth="200">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="40"/>
+            <RowDefinition Height="40"/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <syncfusion:ColorPickerPalette  Grid.Row="0" Grid.Column="0" x:Name="ColorPalett" ColorChanged="ColorPalett_ColorChanged"/>
+
+        <TextBlock Grid.Row="0" Grid.Column="1" Text="Толщина" VerticalAlignment="Top" Height="20"/>
+        <Slider Grid.Row="0" Grid.Column="1" VerticalAlignment="Bottom"  Minimum="0" Maximum="50" ValueChanged="width_ValueChanged" x:Name="width"/>
+
+        <RadioButton GroupName="tools" Grid.Row="1" Grid.Column="0" x:Name="pen" HorizontalAlignment="Left"  Checked="pen_Checked"/>
+        <TextBlock Grid.Row="1" Grid.Column="0"   Text="Перо" VerticalAlignment="Center" Margin="20,0,0,0"/>
+
+        <RadioButton GroupName="tools" Grid.Row="2" Grid.Column="0" x:Name="eraser" HorizontalAlignment="Left"  Checked="eraser_Checked"/>
+        <TextBlock Grid.Row="2" Grid.Column="0"   Text="Ластик" VerticalAlignment="Center" Margin="20,0,0,0"/>
+
+        <RadioButton GroupName="tools" Grid.Row="3" Grid.Column="0" x:Name="pouring" HorizontalAlignment="Left"  Checked="pouring_Checked"/>
+        <TextBlock Grid.Row="3" Grid.Column="0"   Text="Фон" VerticalAlignment="Center" Margin="20,0,0,0"/>
+
+        
+        <RadioButton GroupName="tools" Grid.Row="4" Grid.Column="0" x:Name="line" HorizontalAlignment="Left"  Checked="line_Checked"/>
+        <TextBlock Grid.Row="4" Grid.Column="0"   Text="Линия" VerticalAlignment="Center" Margin="20,0,0,0"/>
+
+        <RadioButton GroupName="tools" Grid.Row="2" Grid.Column="1" x:Name="rectangle" HorizontalAlignment="Left"  Checked="rectangle_Checked"/>
+        <TextBlock Grid.Row="2" Grid.Column="1"   Text="Прямоугольник" VerticalAlignment="Center" Margin="20,0,0,0"/>
+
+        <RadioButton GroupName="tools" Grid.Row="3" Grid.Column="1" x:Name="elipse" HorizontalAlignment="Left"  Checked="elipse_Checked"/>
+        <TextBlock Grid.Row="3" Grid.Column="1"   Text="Эллипс" VerticalAlignment="Center" Margin="20,0,0,0"/>
+    </Grid>
+</ContentControl>
